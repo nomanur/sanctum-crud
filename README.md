@@ -1,4 +1,4 @@
-# Very short description of the package
+# A Laravel starter kit with sanctum
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/nomanur/sanctum-crud.svg?style=flat-square)](https://packagist.org/packages/nomanur/sanctum-crud)
 [![Total Downloads](https://img.shields.io/packagist/dt/nomanur/sanctum-crud.svg?style=flat-square)](https://packagist.org/packages/nomanur/sanctum-crud)

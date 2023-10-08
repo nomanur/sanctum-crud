@@ -16,7 +16,6 @@ composer require nomanur/sanctum-crud
 
 Add this in User Model
 ```php
-// Usage description here
     public function roles() {
         return $this->belongsToMany(Role::class, 'user_roles');
     }

@@ -19,13 +19,13 @@ class SanctumCrudServiceProvider extends ServiceProvider
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadRoutesFrom(__DIR__.'/routes/routes.php');
         $this->publishes([
-            __DIR__.'/Http/Controllers/SanctumCrudController.php' => app_path('Http/Controllers/SanctumCrudController.php'),
+            __DIR__.'/Controllers/SanctumCrudController.php' => app_path('Http/Controllers/SanctumCrudController.php'),
         ]);
         $this->publishes([
-            __DIR__.'/Http/Controllers/SanctumCrudRoleController.php' => app_path('Http/Controllers/SanctumCrudRoleController.php'),
+            __DIR__.'/Controllers/SanctumCrudRoleController.php' => app_path('Http/Controllers/SanctumCrudRoleController.php'),
         ]);
         $this->publishes([
-            __DIR__.'/Http/Controllers/SanctumCrudUserRoleController.php' => app_path('Http/Controllers/SanctumCrudUserRoleController.php'),
+            __DIR__.'/Controllers/SanctumCrudUserRoleController.php' => app_path('Http/Controllers/SanctumCrudUserRoleController.php'),
         ]);
         $this->publishes([
             __DIR__.'/Models/SanctumCrudRole.php.stub' => app_path('Models/Role.php'),

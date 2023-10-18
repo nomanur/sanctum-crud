@@ -1,0 +1,13 @@
+
+Route::apiResource('users', App\Http\Controllers\SanctumCrudController::class)->except(['edit', 'create', 'store', 'update'])->middleware(['auth:sanctum', 'ability:admin,super-admin']);
+
+Route::post('login', [App\Http\Controllers\SanctumCrudController::class, 'login']);
+Route::post('users', [App\Http\Controllers\SanctumCrudController::class, 'store']);
+
+Route::put('users/{user}', [App\Http\Controllers\SanctumCrudController::class, 'update'])->middleware(['auth:sanctum', 'ability:admin,super-admin,user']);
+Route::post('users/{user}', [App\Http\Controllers\SanctumCrudController::class, 'update'])->middleware(['auth:sanctum', 'ability:admin,super-admin,user']);
+Route::patch('users/{user}', [App\Http\Controllers\SanctumCrudController::class, 'update'])->middleware(['auth:sanctum', 'ability:admin,super-admin,user']);
+Route::get('me', [App\Http\Controllers\SanctumCrudController::class, 'me'])->middleware('auth:sanctum');
+
+Route::apiResource('roles', App\Http\Controllers\SanctumCrudRoleController::class)->except(['create', 'edit'])->middleware(['auth:sanctum', 'ability:admin,super-admin,user']);
+Route::apiResource('users.roles', App\Http\Controllers\SanctumCrudUserRoleController::class)->except(['create', 'edit', 'show', 'update'])->middleware(['auth:sanctum', 'ability:admin,super-admin']);

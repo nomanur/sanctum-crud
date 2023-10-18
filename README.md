@@ -20,11 +20,19 @@ Add this in User Model
         return $this->belongsToMany(Role::class, 'user_roles');
     }
 ```
+
+After That
+```php
+    php artisan sanctumcrud:route
+```
+all the routes will be added in your routes\api.php
+
+
 After That
 ```php
     php artisan vendor:publish
 ```
-Publish Laravel\Sanctum\SanctumServiceProvider and sanctum-crud-config;
+Publish Laravel\Sanctum\SanctumServiceProvider and sanctum-crud-config
 
 ### Testing
 

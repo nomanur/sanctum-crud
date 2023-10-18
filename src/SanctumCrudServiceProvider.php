@@ -17,7 +17,7 @@ class SanctumCrudServiceProvider extends ServiceProvider
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'sanctum-crud');
         // $this->loadViewsFrom(__DIR__.'/../resources/views', 'sanctum-crud');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        $this->loadRoutesFrom(__DIR__.'/routes/routes.php');
+        //$this->loadRoutesFrom(__DIR__.'/routes/routes.php');
         $this->publishes([
             __DIR__.'/Controllers/SanctumCrudController.php' => app_path('Http/Controllers/SanctumCrudController.php'),
         ]);
@@ -61,7 +61,9 @@ class SanctumCrudServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-            // $this->commands([]);
+            $this->commands([
+                RouteCommand::class,
+            ]);
         }
     }
 

@@ -27,6 +27,11 @@ return new class extends Migration
             'name' => 'super-admin',
             'slug' => 'super-admin',
         ]);
+
+        \App\Models\Role::create([
+            'name' => 'user',
+            'slug' => 'user',
+        ]);
     }
 
     /**

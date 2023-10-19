@@ -37,7 +37,7 @@ After That
 ```php
     php artisan vendor:publish
 ```
-Publish Laravel\Sanctum\SanctumServiceProvider and sanctum-crud-config
+Publish Laravel\Sanctum\SanctumServiceProvider
 
 ### Testing
 

@@ -37,7 +37,7 @@ After That
 ```php
     php artisan vendor:publish
 ```
-Publish Laravel\Sanctum\SanctumServiceProvider
+Publish Nomanur\SanctumCrud\SanctumCrudServiceProvider
 
 ### Testing
 

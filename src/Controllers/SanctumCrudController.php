@@ -43,7 +43,7 @@ class SanctumCrudController extends Controller{
             'name' => $creds['name'],
         ]);
   
-        $defaultRoleSlug = config('hydra.default_user_role_slug', 'user');
+        $defaultRoleSlug = config('sanctum-crud.default_user_role_slug', 'user');
         $user->roles()->attach(Role::where('slug', $defaultRoleSlug)->first());
   
         return $user;
@@ -66,7 +66,7 @@ class SanctumCrudController extends Controller{
             return response(['error' => 1, 'message' => 'invalid credentials'], 401);
         }
   
-        if (config('hydra.delete_previous_access_tokens_on_login', false)) {
+        if (config('sanctum-crud.delete_previous_access_tokens_on_login', false)) {
             $user->tokens()->delete();
         }
   

@@ -1,9 +1,10 @@
 <?php
 
-namespace Nomanur\SanctumCrud\Controllers;
+namespace App\Http\Controllers;
 
 use App\Models\Role;
 use App\Models\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class SanctumCrudUserRoleController extends Controller{

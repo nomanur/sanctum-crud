@@ -40,6 +40,11 @@ class SanctumCrudServiceProvider extends ServiceProvider
                 __DIR__ . '/../database/migrations/create_user_roles_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time())) . '_create_user_roles_table.php'
             ]);
         }
+        if(! class_exists('RoleSeeder')){
+            $this->publishes([
+                __DIR__ . '/../database/seeders/RoleSeeder.php.stub' => database_path('seeders/' . 'RoleSeeder.php')
+            ]);
+        }
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('sanctum-crud.php'),

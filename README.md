@@ -23,6 +23,11 @@ Add this in User Model
 
 After That
 ```php
+    php artisan migrate
+```
+run that to generate migration and which will also seed role in roles table.
+
+```php
     php artisan sanctumcrud:route
 ```
 all the routes will be added in your routes\api.php and check php artisan route:list to see all the routes.

@@ -39,6 +39,11 @@ After That
 ```
 Publish Nomanur\SanctumCrud\SanctumCrudServiceProvider
 
+And
+```php
+    php artisan migrate
+```
+
 ### Testing
 
 ```bash

@@ -25,7 +25,7 @@ After That
 ```php
     php artisan sanctumcrud:route
 ```
-all the routes will be added in your routes\api.php
+all the routes will be added in your routes\api.php and check php artisan route:list to see all the routes.
 
 
 After That
